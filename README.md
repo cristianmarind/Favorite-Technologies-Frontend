@@ -2,6 +2,12 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+# System documentation
+
+The system has a 2-layer architecture, in the upper layer are the views and renderable components, in the lower layer are the assets, the application theme, a set of utilities, a component responsible for communication with external systems and a component responsible for managing the state of the application.
+
+![Components diagram](./documentation/componentdiagram.png)
+
 ## Available Scripts
 
 In the project directory, you can run:
