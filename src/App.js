@@ -1,24 +1,59 @@
-import logo from './logo.svg';
+import React from 'react'
 import './App.css';
+import { Provider } from 'react-redux'
+import getStore from './state'
+
+import { BrowserRouter, Switch } from 'react-router-dom'
+import { ROUTES } from './utilities/router/config'
+import UnloggedRoute from './utilities/router/UnloggedRoute'
+import LoggedRoute from './utilities/router/LoggedRoute'
+
+import Login from './pages/Login'
+import Signup from './pages/Signup'
+import TechList from './pages/TechList'
+
+import AppConnectLS from './utilities/AppConnectLS'
+
+
+const store = getStore()
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Provider store={store}>
+      <AppConnectLS
+        render={() => {
+          return (
+            <BrowserRouter>
+              <Switch>
+                <UnloggedRoute 
+                  path={ROUTES.LOGIN.PATH}
+                  exact={true}
+                  render={() => {
+                    return <Login />
+                  }}
+                />
+                <UnloggedRoute 
+                  path={ROUTES.SIGNUP.PATH}
+                  exact={true}
+                  render={() => {
+                    return <Signup />
+                  }}
+                />
+                <LoggedRoute 
+                  path={ROUTES.TECH_LIST.PATH}
+                  exact={true}
+                  render={() => {
+                    return <TechList />
+                  }}
+                />
+                
+              </Switch>
+            </BrowserRouter>
+          )
+        }}      
+      />
+    </Provider>
   );
 }
 
