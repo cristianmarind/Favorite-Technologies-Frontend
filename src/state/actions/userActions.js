@@ -1,4 +1,4 @@
-import { USER_ACTIONS } from '../../appConfiguration'
+import { USER_ACTIONS } from './config'
 
 export const setUserAttrsAction = (attrs) => {
   return {

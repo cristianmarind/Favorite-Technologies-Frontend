@@ -1,6 +1,6 @@
 import thunkMiddleware from 'redux-thunk'
 import { createStore, applyMiddleware } from 'redux'
-import { TECHNOLOGIES_ACTIONS, USER_ACTIONS } from '../appConfiguration'
+import { TECHNOLOGIES_ACTIONS, USER_ACTIONS } from './actions/config'
 
 const initialState = {
   technologies: [],

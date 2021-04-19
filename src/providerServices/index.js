@@ -1,4 +1,4 @@
-import { BACKEND_API } from "../appConfiguration"
+import { BACKEND_API } from "./config"
 
 export const login = async (email, password) => {
   try {

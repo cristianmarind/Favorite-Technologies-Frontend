@@ -1,4 +1,4 @@
-import { USER_ACTIONS } from '../../appConfiguration'
+import { USER_ACTIONS } from './config'
 import { login, signup } from '../../providerServices'
 import { setUserAttrsAction } from './userActions'
 

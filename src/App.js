@@ -3,11 +3,12 @@ import './App.css';
 import { Provider } from 'react-redux'
 import getStore from './state'
 
-import { BrowserRouter, Switch } from 'react-router-dom'
+import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import { ROUTES } from './utilities/router/config'
 import UnloggedRoute from './utilities/router/UnloggedRoute'
 import LoggedRoute from './utilities/router/LoggedRoute'
 
+import LandingPage from './pages/LandingPage'
 import Login from './pages/Login'
 import Signup from './pages/Signup'
 import TechList from './pages/TechList'
@@ -26,6 +27,13 @@ function App() {
           return (
             <BrowserRouter>
               <Switch>
+                <Route 
+                  path={ROUTES.LANDING_PAGE.PATH}
+                  exact={true}
+                  render={() => {
+                    return <LandingPage />
+                  }}
+                />
                 <UnloggedRoute 
                   path={ROUTES.LOGIN.PATH}
                   exact={true}
