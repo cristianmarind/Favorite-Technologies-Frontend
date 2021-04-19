@@ -1,0 +1,170 @@
+/*Font family*/
+@font-face {
+  font-family: Montserrat;
+  src: url("../assets/fontFamily/Montserrat-Regular.ttf");
+}
+@font-face {
+  font-family: Montserrat;
+  src: url("../assets/fontFamily/Montserrat-Bold.ttf");
+  font-weight: bold;
+}
+@font-face {
+  font-family: Montserrat;
+  src: url("../assets/fontFamily/Montserrat-Italic.ttf");
+  font-style: italic;
+}
+@font-face {
+  font-family: Montserrat;
+  src: url("../assets/fontFamily/Montserrat-BoldItalic.ttf");
+  font-weight: bold;
+  font-style: italic;
+}
+@font-face {
+  font-family: Montserrat;
+  src: url("../assets/fontFamily/Montserrat-ExtraBold.ttf");
+  font-weight: bolder;
+}
+@font-face {
+  font-family: Montserrat;
+  src: url("../assets/fontFamily/Montserrat-ExtraBoldItalic.ttf");
+  font-weight: bolder;
+  font-style: italic;
+}
+
+* {
+  font-family: Lato, Arial, Helvetica, sans-serif;
+}
+
+
+/*Variables css*/
+:root {
+  --primary-a-color: #2aa7df;
+  --primary-a-color-dark: #2887b3;
+  --primary-b-color: #a3cc39;
+  --primary-b-color-dark: #77942e;
+  --ligth-color: #f2f5fa;
+  --black-color: #000;
+  --white-color: #fff;
+}
+/*Colores personalizados*/
+.bg-primary-a{
+  background-color: var(--primary-a-color) !important;
+}
+.text-primary-a{
+  color: var(--primary-a-color) !important;
+}
+.border-color-primary-a{
+  border-color: var(--primary-a-color) !important;
+}
+
+.bg-primary-b{
+  background-color: var(--primary-b-color) !important;
+}
+.text-primary-b{
+  color: var(--primary-b-color) !important;
+}
+.border-color-primary-b{
+  border-color: var(--primary-b-color) !important;
+}
+
+.bg-ligth{
+  background-color: var(--ligth-color) !important;
+}
+.text-ligth{
+  color: var(--ligth-color) !important;
+}
+.border-color-ligth{
+  border-color: var(--ligth-color) !important;
+}
+
+
+/*Custom input*/
+.input {
+  display: flex;
+  align-items: center;
+  border: 1px;
+  border-color: var(--secondary-color);
+  border-radius: 0.2em;
+  padding: .5em 1em;
+  background-color: #fff;
+  box-shadow: 1px 1px 5px;
+}
+.input div {
+  width: 2em;
+}
+.input input{
+  outline: none;
+  border: none;
+}
+.input input:focus{
+  outline: none;
+  border: none !important;
+}
+
+/*Custom button*/
+.btn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 11px 20px;
+  border-radius: 60px;
+  border-color: transparent;
+}
+/* Buttons */
+.btn-primary-a {
+  background-color: var(--primary-a-color);
+  border-color: var(--primary-a-color);
+  color: var(--white-color);
+}
+.btn-primary-a:active {
+  background-color: var(--primary-a-color-dark);
+}
+
+.btn-primary-a-outline {
+  border-color: var(--primary-a-color);
+  color: var(--black-color);
+}
+.btn-primary-a-outline:active {
+  background-color: var(--primary-a-color);
+  color: var(--white-color);
+}
+
+.btn-primary-b {
+  background-color: var(--primary-b-color);
+  border-color: var(--primary-b-color);
+  color: var(--white-color);
+}
+.btn-primary-b:active {
+  background-color: var(--primary-b-color-dark);
+}
+
+.btn-primary-b-outline {
+  border-color: var(--primary-b-color);
+  color: var(--black-color);
+}
+.btn-primary-b-outline:active {
+  background-color: var(--primary-b-color);
+  color: var(--white-color);
+}
+
+/*Font size*/
+.font-size-large{
+  font-size: 26px;
+}
+.font-size-x-large{
+  font-size: 36px;
+}
+
+.font-size-normal{
+  font-size: 18px;
+}
+.font-size-x-normal{
+  font-size: 20px;
+}
+.font-size-xx-normal{
+  font-size: 22px;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}

@@ -15,7 +15,7 @@ export const DISPLAY_CONDITION_TYPES ={
 
 export const STYLE_TYPES = {
   BASIC: 'basic',
-  BUTTON_PRIMARY_OUTLINE: 'button-primary-a-outline'
+  BUTTON_PRIMARY_OUTLINE: 'btn-primary-a-outline'
 }
 
 export const HEADER_CONF = {
