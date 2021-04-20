@@ -1,0 +1,18 @@
+.benefits{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.benefits > div{
+    margin: 2em 3em;
+}
+
+.benefit .image{
+    min-width: 10em;
+    min-height: 10em;
+    max-height: 15em;
+    max-width: 15em;
+    background-position: center;
+    background-size: 80%;
+    background-repeat: no-repeat;
+}

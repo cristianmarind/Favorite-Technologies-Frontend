@@ -1,0 +1,16 @@
+.greetingHTML{
+    padding-left: 5em;
+}
+
+@media (max-width: 900px) {
+    .greetingHTML{
+        padding-left: 2em;
+    }
+}
+
+@media (max-width: 576px) {
+    .greetingHTML{
+        padding-left: 1em;
+    }
+}
+

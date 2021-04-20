@@ -1,38 +1,42 @@
 /*Font family*/
 @font-face {
   font-family: Montserrat;
-  src: url("../assets/fontFamily/Montserrat-Regular.ttf");
+  src: url("../assets/Fonts/Montserrat/Montserrat-Regular.ttf");
 }
-@font-face {
+/*@font-face {
   font-family: Montserrat;
-  src: url("../assets/fontFamily/Montserrat-Bold.ttf");
+  src: url("../assets/Fonts/Montserrat/Montserrat-Bold.ttf");
   font-weight: bold;
 }
 @font-face {
   font-family: Montserrat;
-  src: url("../assets/fontFamily/Montserrat-Italic.ttf");
+  src: url("../assets/Fonts/Montserrat/Montserrat-Italic.ttf");
   font-style: italic;
 }
 @font-face {
   font-family: Montserrat;
-  src: url("../assets/fontFamily/Montserrat-BoldItalic.ttf");
+  src: url("../assets/Fonts/Montserrat/Montserrat-BoldItalic.ttf");
   font-weight: bold;
   font-style: italic;
 }
 @font-face {
   font-family: Montserrat;
-  src: url("../assets/fontFamily/Montserrat-ExtraBold.ttf");
+  src: url("../assets/Fonts/Montserrat/Montserrat-ExtraBold.ttf");
   font-weight: bolder;
 }
 @font-face {
   font-family: Montserrat;
-  src: url("../assets/fontFamily/Montserrat-ExtraBoldItalic.ttf");
+  src: url("../assets/Fonts/Montserrat/Montserrat-ExtraBoldItalic.ttf");
   font-weight: bolder;
   font-style: italic;
-}
+}*/
 
 * {
-  font-family: Lato, Arial, Helvetica, sans-serif;
+  font-family: Montserrat, Arial, Helvetica, sans-serif;
+}
+
+body {
+  margin: 0px;
 }
 
 
@@ -48,35 +52,54 @@
 }
 /*Colores personalizados*/
 .bg-primary-a{
-  background-color: var(--primary-a-color) !important;
+  background-color: var(--primary-a-color);
 }
 .text-primary-a{
-  color: var(--primary-a-color) !important;
+  color: var(--primary-a-color);
 }
 .border-color-primary-a{
-  border-color: var(--primary-a-color) !important;
+  border-color: var(--primary-a-color);
 }
 
 .bg-primary-b{
-  background-color: var(--primary-b-color) !important;
+  background-color: var(--primary-b-color);
 }
 .text-primary-b{
-  color: var(--primary-b-color) !important;
+  color: var(--primary-b-color);
 }
 .border-color-primary-b{
-  border-color: var(--primary-b-color) !important;
+  border-color: var(--primary-b-color);
 }
 
 .bg-ligth{
-  background-color: var(--ligth-color) !important;
+  background-color: var(--ligth-color);
 }
 .text-ligth{
-  color: var(--ligth-color) !important;
+  color: var(--ligth-color);
 }
 .border-color-ligth{
-  border-color: var(--ligth-color) !important;
+  border-color: var(--ligth-color);
 }
 
+.bg-white {
+  background-color: var(--white-color);
+}
+.text-white {
+  color: var(--white-color);
+}
+.border-color-white{
+  border-color: var(--white-color);
+}
+
+.bg-black {
+  background-color: var(--black-color);
+}
+.text-black {
+  color: var(--black-color);
+}
+.border-color-black{
+  border-color: var(--black-color);
+}
 
 /*Custom input*/
 .input {
@@ -98,7 +121,7 @@
 }
 .input input:focus{
   outline: none;
-  border: none !important;
+  border: none;
 }
 
 /*Custom button*/
@@ -109,6 +132,7 @@
   padding: 11px 20px;
   border-radius: 60px;
   border-color: transparent;
+  border-style: solid;
 }
 /* Buttons */
 .btn-primary-a {
@@ -116,15 +140,16 @@
   border-color: var(--primary-a-color);
   color: var(--white-color);
 }
-.btn-primary-a:active {
+.btn-primary-a:hover {
   background-color: var(--primary-a-color-dark);
 }
 
 .btn-primary-a-outline {
   border-color: var(--primary-a-color);
   color: var(--black-color);
+  background-color: transparent;
 }
-.btn-primary-a-outline:active {
+.btn-primary-a-outline:hover {
   background-color: var(--primary-a-color);
   color: var(--white-color);
 }
@@ -134,15 +159,16 @@
   border-color: var(--primary-b-color);
   color: var(--white-color);
 }
-.btn-primary-b:active {
+.btn-primary-b:hover {
   background-color: var(--primary-b-color-dark);
 }
 
 .btn-primary-b-outline {
   border-color: var(--primary-b-color);
   color: var(--black-color);
+  background-color: transparent;
 }
-.btn-primary-b-outline:active {
+.btn-primary-b-outline:hover {
   background-color: var(--primary-b-color);
   color: var(--white-color);
 }
@@ -167,4 +193,97 @@
 
 .cursor-pointer {
   cursor: pointer;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.pt-1 {
+  padding-top: .5em;
+}
+.pt-2 {
+  padding-top: 1em;
+}
+.pt-3 {
+  padding-top: 1.5em;
+}
+.pt-4 {
+  padding-top: 2em;
+}
+.pt-5 {
+  padding-top: 2.5em;
+}
+
+.pl-1 {
+  padding-left: .5em;
+}
+.pl-2 {
+  padding-left: 1em;
+}
+.pl-3 {
+  padding-left: 1.5em;
+}
+.pl-4 {
+  padding-left: 2em;
+}
+.pl-5 {
+  padding-left: 2.5em;
+}
+
+.px-1 {
+  padding-left: .5em;
+  padding-right: .5em;
+}
+.px-2 {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+.px-3 {
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+}
+.px-4 {
+  padding-left: 2em;
+  padding-right: 2em;
+}
+.px-5 {
+  padding-left: 2.5em;
+  padding-right: 2.5em;
+}
+
+/* Layout */
+
+.containerX {
+  display: flex;
+}
+
+.containerY {
+  display: flex;
+  flex-direction: column;
+}
+
+.containerX.x-center {
+  justify-content: center;
+}
+
+.containerX.y-center {
+  align-items: center;
+}
+
+.containerY.x-center {
+  align-items: center;
+  
+}
+
+.containerY.y-center {
+  justify-content: center;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.h-auto {
+  height: auto;
 }

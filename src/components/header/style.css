@@ -1,0 +1,29 @@
+.custom-header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: .5em 1em;
+}
+.custom-header .image {
+    max-width: 10em;
+}
+.custom-header .image img {
+    width: 100%;
+    height: auto;
+}
+.custom-header .options {
+    display: flex;
+}
+.custom-header .options .option {
+    margin: .5em 1em;
+}
+
+@media (max-width: 576px) {
+    .custom-header {
+        display: flex;
+        flex-direction: column;
+        justify-content: none;
+        align-items: center;
+        padding: .5em 1em;
+    }
+}

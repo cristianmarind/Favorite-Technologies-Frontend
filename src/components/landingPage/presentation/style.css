@@ -1,0 +1,27 @@
+.presentation {
+    display: flex;
+    height: 30em;
+}
+.presentation > div {
+    width: 50%;
+}
+.presentation .network .image {
+    max-width: 2em;
+    margin-right: .5em;
+}
+.presentation .network .image img {
+    width: 100%;
+    height: auto;
+}
+
+@media (max-width: 800px) {
+    .presentation {
+        display: flex;
+        flex-direction: column;
+        height: unset;
+    }
+    .presentation > div {
+        width: 100%;
+        height: 30em;
+    }
+}

@@ -6,7 +6,7 @@ import home_office_image from "../../../assets/benefits/Ic_HomeOffice.svg"
 import workshops_image from "../../../assets/benefits/Ic_Workshops.svg"
 
 export const BENEFITS_CONF = {
-  titleHtml: '<span>Entre los beneficios que ofrecemos se encuentran <span class="text-primary-a">;)</span></span>',
+  titleHtml: '<b><span>Entre los beneficios que ofrecemos se encuentran <span class="text-primary-a">;)</span></span></b>',
   benefits: [
     {
       image: hour_image,

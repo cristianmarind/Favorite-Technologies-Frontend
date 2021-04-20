@@ -1,5 +1,5 @@
 import { ROUTES } from '../../utilities/router/config'
-import logo_full_color from "../assets/logo_full_color.svg"
+import logo_full_color from "../../assets/logo_full_color.svg"
 
 export const MENU_ACTION_TYPES = {
   ROUTE_TO: 'routeTo',
@@ -44,8 +44,8 @@ export const HEADER_CONF = {
         path: ROUTES.LANDING_PAGE.PATH
       },
       action: {
-        type: MENU_ACTION_TYPES.ROUTE_TO,
-        path: ROUTES.LANDING_PAGE.PATH
+        type: MENU_ACTION_TYPES.MOVE_TO_ELEMENT,
+        elementId: 'benefits'
       }
     },
     {
@@ -58,7 +58,7 @@ export const HEADER_CONF = {
       },
       action: {
         type: MENU_ACTION_TYPES.ROUTE_TO,
-        path: ROUTES.LANDING_PAGE.PATH
+        path: ROUTES.LOGIN.PATH
       }
     }
   ]

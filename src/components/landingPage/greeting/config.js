@@ -7,7 +7,7 @@ import background_image_lg from "../../../assets/Backgrounds/Bg_Header@3x.png"
 
 
 export const GREETING_CONF = {
-  greetingHTML: '<span>Bienvenido a tu <b>Entrevista Técnica</b> en <span class="text-primary-b">Wollox</span></span>',
+  greetingHTML: '<span>Bienvenido a tu <br/> <b>Entrevista Técnica</b> en <br /><span class="text-primary-b"><b>Wollox</b></span></span>',
   imageConfig: {
     sm: greeting_image_sm,
     md: greeting_image_md,

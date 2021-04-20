@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
@@ -10,11 +10,7 @@ const AutenticationProvider = ({ isAuthenticated, render }) => {
   }, [isAuthenticated])
   
 
-  return (
-    <div>
-        { render(isLogged) }
-    </div>
-  )
+  return render(isLogged)
 }
 
 const mapStateToProps = (state) => {
