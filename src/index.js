@@ -13,7 +13,7 @@ import LoggedRoute from './utilities/router/LoggedRoute'
 import CustomHeader from './components/header/CustomHeader'
 import CustomFooter from './components/footer/CustomFooter'
 import LandingPage from './pages/LandingPage'
-import Login from './pages/Login'
+//import Login from './pages/Login'
 import Signup from './pages/Signup'
 import TechList from './pages/TechList'
 
@@ -27,7 +27,7 @@ ReactDOM.render(
       <AppConnectLS
         render={() => {
           return (
-            
+
             <BrowserRouter>
               <div id="app" className="containerY">
                 <div style={{
@@ -38,44 +38,46 @@ ReactDOM.render(
                 }}>
                   <CustomHeader />
                 </div>
-                <Switch>
-                  <Route 
-                    path={ROUTES.LANDING_PAGE.PATH}
-                    exact={true}
-                    render={() => {
-                      return <LandingPage />
-                    }}
-                  />
-                  <UnloggedRoute 
-                    path={ROUTES.LOGIN.PATH}
-                    exact={true}
-                    render={() => {
-                      return <Login />
-                    }}
-                  />
-                  <UnloggedRoute 
-                    path={ROUTES.SIGNUP.PATH}
-                    exact={true}
-                    render={() => {
-                      return <Signup />
-                    }}
-                  />
-                  <LoggedRoute 
-                    path={ROUTES.TECH_LIST.PATH}
-                    exact={true}
-                    render={() => {
-                      return <TechList />
-                    }}
-                  />
-                  
-                </Switch>
+                <div className="pt-5">
+                  <Switch>
+                    <Route
+                      path={ROUTES.LANDING_PAGE.PATH}
+                      exact={true}
+                      render={() => {
+                        return <LandingPage />
+                      }}
+                    />
+                    <UnloggedRoute
+                      path={ROUTES.LOGIN.PATH}
+                      exact={true}
+                      render={() => {
+                        return <Signup />
+                      }}
+                    />
+                    <UnloggedRoute
+                      path={ROUTES.SIGNUP.PATH}
+                      exact={true}
+                      render={() => {
+                        return <Signup />
+                      }}
+                    />
+                    <LoggedRoute
+                      path={ROUTES.TECH_LIST.PATH}
+                      exact={true}
+                      render={() => {
+                        return <TechList />
+                      }}
+                    />
+
+                  </Switch>
+                </div>
                 <CustomFooter />
               </div>
             </BrowserRouter>
-              
-            
+
+
           )
-        }}      
+        }}
       />
     </Provider>
   </React.StrictMode>,

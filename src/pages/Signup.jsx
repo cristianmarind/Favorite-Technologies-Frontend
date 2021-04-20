@@ -1,27 +1,12 @@
 import React from 'react'
-import { useDispatch } from 'react-redux'
-
-import { signupAction } from '../state/actions/authActions'
-
+import SignupForm from '../components/auth/SignupForm'
 
 const Signup = () => {
-  const dispatch = useDispatch()
-
-  const handleSignup = () => {
-    dispatch(signupAction({
-        "name": "Joe",
-        "last_name": "Doe",
-        "country": "argentina",
-        "province": "buenos_aires",
-        "mail": "joe.doe@gmail.com",
-        "phone": "47468900",
-        "password": "abc12345678"
-    }))
-  }
-
   return (
-    <div>
-      <button onClick={handleSignup}>Signup</button>
+    <div className="containerX x-center pt-5">
+      <div className="pt-4">
+        <SignupForm />
+      </div>
     </div>
   )
 

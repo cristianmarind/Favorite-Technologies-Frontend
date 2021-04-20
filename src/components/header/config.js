@@ -60,6 +60,19 @@ export const HEADER_CONF = {
         type: MENU_ACTION_TYPES.ROUTE_TO,
         path: ROUTES.LOGIN.PATH
       }
-    }
+    },
+    {
+      label: 'Mis tecnologias',
+      style: {
+        type: STYLE_TYPES.BASIC
+      },
+      displayCondition: {
+        type: DISPLAY_CONDITION_TYPES.USER_LOGGED
+      },
+      action: {
+        type: MENU_ACTION_TYPES.ROUTE_TO,
+        path: '/techList'
+      }
+    },
   ]
 }
