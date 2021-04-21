@@ -34,11 +34,16 @@ ReactDOM.render(
                   position: 'fixed',
                   top: 0,
                   left: 0,
-                  right: 0
+                  right: 0,
+                  zIndex: 100
                 }}>
                   <CustomHeader />
                 </div>
-                <div className="pt-5">
+                <div
+                  style={{
+                    zIndex: 1
+                  }}
+                  className="pt-5">
                   <Switch>
                     <Route
                       path={ROUTES.LANDING_PAGE.PATH}
@@ -71,7 +76,12 @@ ReactDOM.render(
 
                   </Switch>
                 </div>
-                <CustomFooter />
+                <div style={{
+                  zIndex: 1
+                }}>
+                  <CustomFooter />
+                </div>
+                
               </div>
             </BrowserRouter>
 

@@ -1,0 +1,5 @@
+.techCount {
+    margin-left: .3em;
+    font-weight: bold;
+    color: var(--primary-b-color);
+}

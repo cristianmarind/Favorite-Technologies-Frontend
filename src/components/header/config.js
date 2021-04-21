@@ -15,7 +15,8 @@ export const DISPLAY_CONDITION_TYPES ={
 
 export const STYLE_TYPES = {
   BASIC: 'basic',
-  BUTTON_PRIMARY_OUTLINE: 'btn-primary-a-outline'
+  BUTTON_PRIMARY_OUTLINE: 'btn-primary-a-outline',
+  TECHS_SELECTED: 'techsSelected'
 }
 
 export const HEADER_CONF = {
@@ -64,7 +65,7 @@ export const HEADER_CONF = {
     {
       label: 'Mis tecnologias',
       style: {
-        type: STYLE_TYPES.BASIC
+        type: STYLE_TYPES.TECHS_SELECTED
       },
       displayCondition: {
         type: DISPLAY_CONDITION_TYPES.USER_LOGGED

@@ -20,7 +20,11 @@ const TechList = ({ technologies }) => {
             return (
               <div key={tech.id} className="tech">
                 <div className="adm">
-                  <TechStateManagment />
+                  <TechStateManagment 
+                    isFavorite={tech.isFavorite}
+                    techId={tech.id} 
+                    tech={tech.attrs.tech}
+                  />
                 </div>
                 <div
                   className="image"

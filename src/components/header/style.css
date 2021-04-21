@@ -3,6 +3,7 @@
     justify-content: space-around;
     align-items: center;
     padding: .5em 1em;
+    background: linear-gradient(#ffffff, #ffffffad);
 }
 .custom-header .image {
     max-width: 10em;

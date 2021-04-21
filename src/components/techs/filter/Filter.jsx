@@ -1,12 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import PropTypes from 'prop-types';
 import { FILTER_CONFIG } from './config'
-
-const INPUT_SYLE = {
-  maxWidth: '30em',
-  minWidth: '20em',
-  with: '100%'
-}
+import './style.css'
 
 const Filter = ({ filter, onChange, options }) => {
   const [search, setSearch] = useState('')
@@ -58,9 +53,9 @@ const Filter = ({ filter, onChange, options }) => {
   }, [filter])
 
   return (
-    <div>
+    <div className="filter">
       <div className="mb-2 containerX x-center">
-        <div style={INPUT_SYLE} className="input">
+        <div className="input search">
           <div>
             <img src={FILTER_CONFIG.SEARCH.ICON} />
           </div>

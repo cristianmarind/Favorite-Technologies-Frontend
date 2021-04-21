@@ -19,7 +19,7 @@ const technologiesReducer = (technologies, action) => {
     case TECHNOLOGIES_ACTIONS.TECHNOLOGIE_CHANGE_STATE: {
       const technologie = {
         ...technologies[action.index],
-        isFavorite: !technologies[action.index].isFavorite
+        isFavorite: action.isFavorite
       }
       return technologies.slice(0, action.index)
         .concat([technologie])

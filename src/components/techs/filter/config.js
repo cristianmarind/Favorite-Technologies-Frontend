@@ -1,5 +1,6 @@
 import sort_asc from '../../../assets/fillter_icons/sort_asc.png'
 import sort_desc from '../../../assets/fillter_icons/sort_desc.png'
+import { CONFIG } from '../../../utilities'
 
 export const FILTER_CONFIG = {
   SEARCH: {
@@ -9,11 +10,11 @@ export const FILTER_CONFIG = {
   ORDER: {
     ASC: {
       IMAGE: sort_asc,
-      ID: 'asc'
+      ID: CONFIG.FILTER.ORDER.ASC.ID
     },
     DESC: {
       IMAGE: sort_desc,
-      ID: 'desc'
+      ID: CONFIG.FILTER.ORDER.DESC.ID
     }
   }
 }
