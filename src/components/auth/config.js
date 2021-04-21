@@ -1,3 +1,7 @@
+import background_image_sm from "../../assets/Backgrounds/Bg_Footer.png"
+import background_image_md from "../../assets/Backgrounds/Bg_Footer@2x.png"
+import background_image_lg from "../../assets/Backgrounds/Bg_Footer@3x.png"
+
 export const COUNTRIES = [
   'Argentina', 
   'Chile', 
@@ -16,6 +20,11 @@ export const STATES = [
 
 export const SIGNUP_FORM_CONF = {
   title: '<span>Registrate en <span class="text-primary-b"><b>Wolox</b></span></span>',
+  backgroundImage: {
+    sm: background_image_sm,
+    md: background_image_md,
+    lg: background_image_lg
+  },
   inputs: {
     name: {
       label: 'Ingrese su nombre',

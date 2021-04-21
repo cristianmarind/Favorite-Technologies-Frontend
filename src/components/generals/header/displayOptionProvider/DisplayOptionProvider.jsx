@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types';
 import { useLocation } from 'react-router-dom'
-import AutenticationProvider from '../../../utilities/AutenticationProvider'
+import AutenticationProvider from '../../../../utilities/AutenticationProvider'
 import {
   DISPLAY_CONDITION_TYPES
 } from '../config'

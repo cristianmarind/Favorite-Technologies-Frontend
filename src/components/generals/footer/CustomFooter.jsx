@@ -3,12 +3,13 @@ import {
   FOOTER_CONF
 } from './config'
 
+const FOOTER_STYLE = { maxWidth: '8em', with: '100%' }
+
 const CustomFooter = () => {
 
-
   return (
-    <div className="containerX x-center pt-5">
-      <div style={{ maxWidth: '10em' }}>
+    <div className="containerX x-center">
+      <div style={FOOTER_STYLE}>
         <img 
           src={FOOTER_CONF.imageSrc} 
           className="w-100 h-auto" 

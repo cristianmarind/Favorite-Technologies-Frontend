@@ -1,4 +1,5 @@
 import React, { Suspense } from 'react'
+import Loading from '../components/generals/loading/Loading'
 
 const Greeting = React.lazy(() => import('../components/landingPage/greeting/Greeting'))
 const Presentation = React.lazy(() => import('../components/landingPage/presentation/Presentation'))
@@ -10,7 +11,7 @@ const LandingPage = () => {
 
   return (
     <div>
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<Loading />}>
         <div className="containerY">
           <div id="greeting">
             <Greeting />

@@ -26,9 +26,21 @@
 }
 .tech:nth-child(2n){
     border-color: var(--primary-b-color);
+    animation-name: borderChangeBA;
+    animation-duration: 5s;
+}
+@keyframes borderChangeBA {
+    from {border-color: black}
+    to {border-color: var(--primary-a-color);}
 }
 .tech:nth-child(2n + 1){
     border-color: var(--primary-a-color);
+    animation-name: borderChangeAB;
+    animation-duration: 5s;
+}
+@keyframes borderChangeAB {
+    from {border-color: black;}
+    to {border-color: var(--primary-b-color);}
 }
 .tech .image {
     width: 50%;

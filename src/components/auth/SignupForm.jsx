@@ -7,6 +7,17 @@ import {
 import {
   validateInput
 } from '../../utilities'
+import ResponsiveProvider from '../../utilities/ResponsiveProvider'
+
+const CONTAINER_STYLE = {
+  backgroundSize: 'cover',
+  backgroundPposition: 'center',
+  width: '100%',
+  paddingBottom: '3em'
+}
+const FORM_STYLE = {
+  maxWidth: '30em'
+}
 
 const inputKeys = Object.keys(SIGNUP_FORM_CONF.inputs)
 const removeForService = ['repassword', 'termns']
@@ -65,167 +76,179 @@ const SignupForm = () => {
   }
 
   return (
-    <div className="containerY px-3">
-      <div className="pb-3">
+    <ResponsiveProvider
+      render={responsiveMode => (
         <div
-          className="font-size-large text-center"
-          dangerouslySetInnerHTML={{
-            __html: SIGNUP_FORM_CONF.title
+          style={{
+            ...CONTAINER_STYLE,
+            backgroundImage: `url(${SIGNUP_FORM_CONF.backgroundImage[responsiveMode]}`
           }}
-        />
-      </div>
-      <div className="containerY pb-2">
-        <label htmlFor="name" className="font-size-x-normal">
-          {SIGNUP_FORM_CONF.inputs.name.label}
-        </label>
-        <input
-          id="name"
-          value={inputs.name.value}
-          onChange={(ev) => handleInputChange('name', ev.target.value)}
-          type="text"
-          className="font-size-normal"
-          max={SIGNUP_FORM_CONF.inputs.name.validate.maxLength}
-        />
-        <span>{inputs.name.msg}</span>
-      </div>
-      <div className="containerY pb-2">
-        <label htmlFor="last_name" className="font-size-x-normal">
-          {SIGNUP_FORM_CONF.inputs.last_name.label}
-        </label>
-        <input
-          id="last_name"
-          value={inputs.last_name.value}
-          onChange={(ev) => handleInputChange('last_name', ev.target.value)}
-          type="text"
-          className="font-size-normal"
-          max={SIGNUP_FORM_CONF.inputs.last_name.validate.maxLength}
-        />
-      </div>
-      <div className="containerY pb-2">
-        <label htmlFor="country" className="font-size-x-normal">
-          {SIGNUP_FORM_CONF.inputs.country.label}
-        </label>
-        <select
-          id="country"
-          value={inputs.country.value}
-          onChange={(ev) => handleInputChange('country', ev.target.value)}
-          className="font-size-normal"
+          className="containerX x-center pt-5"
         >
-          {
-            SIGNUP_FORM_CONF.inputs.country.options.map((opt, i) => {
-              return (
-                <option key={i} value={i}>
-                  { opt}
-                </option>
-              )
-            })
-          }
+          <div style={FORM_STYLE} className="containerY px-3 pb-5 mt-5">
+            <div className="pb-3">
+              <div
+                className="font-size-large text-center"
+                dangerouslySetInnerHTML={{
+                  __html: SIGNUP_FORM_CONF.title
+                }}
+              />
+            </div>
+            <div className="containerY pb-2">
+              <label htmlFor="name" className="font-size-x-normal">
+                {SIGNUP_FORM_CONF.inputs.name.label}
+              </label>
+              <input
+                id="name"
+                value={inputs.name.value}
+                onChange={(ev) => handleInputChange('name', ev.target.value)}
+                type="text"
+                className="font-size-normal"
+                max={SIGNUP_FORM_CONF.inputs.name.validate.maxLength}
+              />
+              <span>{inputs.name.msg}</span>
+            </div>
+            <div className="containerY pb-2">
+              <label htmlFor="last_name" className="font-size-x-normal">
+                {SIGNUP_FORM_CONF.inputs.last_name.label}
+              </label>
+              <input
+                id="last_name"
+                value={inputs.last_name.value}
+                onChange={(ev) => handleInputChange('last_name', ev.target.value)}
+                type="text"
+                className="font-size-normal"
+                max={SIGNUP_FORM_CONF.inputs.last_name.validate.maxLength}
+              />
+            </div>
+            <div className="containerY pb-2">
+              <label htmlFor="country" className="font-size-x-normal">
+                {SIGNUP_FORM_CONF.inputs.country.label}
+              </label>
+              <select
+                id="country"
+                value={inputs.country.value}
+                onChange={(ev) => handleInputChange('country', ev.target.value)}
+                className="font-size-normal"
+              >
+                {
+                  SIGNUP_FORM_CONF.inputs.country.options.map((opt, i) => {
+                    return (
+                      <option key={i} value={i}>
+                        { opt}
+                      </option>
+                    )
+                  })
+                }
 
-        </select>
-        <span>{inputs.country.msg}</span>
-      </div>
-      <div className="containerY pb-2">
-        <label htmlFor="province" className="font-size-x-normal">
-          {SIGNUP_FORM_CONF.inputs.province.label}
-        </label>
-        <select
-          id="province"
-          value={inputs.province.value}
-          onChange={(ev) => handleInputChange('province', ev.target.value)}
-          className="font-size-normal"
-        >
-          {
-            SIGNUP_FORM_CONF.inputs.province.options[inputs.country.value].map((opt, i) => {
-              return (
-                <option key={i} value={i}>
-                  { opt}
-                </option>
-              )
-            })
-          }
+              </select>
+              <span>{inputs.country.msg}</span>
+            </div>
+            <div className="containerY pb-2">
+              <label htmlFor="province" className="font-size-x-normal">
+                {SIGNUP_FORM_CONF.inputs.province.label}
+              </label>
+              <select
+                id="province"
+                value={inputs.province.value}
+                onChange={(ev) => handleInputChange('province', ev.target.value)}
+                className="font-size-normal"
+              >
+                {
+                  SIGNUP_FORM_CONF.inputs.province.options[inputs.country.value].map((opt, i) => {
+                    return (
+                      <option key={i} value={i}>
+                        { opt}
+                      </option>
+                    )
+                  })
+                }
 
-        </select>
-        <span>{inputs.province.msg}</span>
-      </div>
-      <div className="containerY pb-2">
-        <label htmlFor="mail" className="font-size-x-normal">
-          {SIGNUP_FORM_CONF.inputs.mail.label}
-        </label>
-        <input
-          id="mail"
-          type="mail"
-          value={inputs.mail.value}
-          onChange={(ev) => handleInputChange('mail', ev.target.value)}
-          className="font-size-normal"
-        />
-        <span>{inputs.mail.msg}</span>
-      </div>
-      <div className="containerY pb-2">
-        <label htmlFor="phone" className="font-size-x-normal">
-          {SIGNUP_FORM_CONF.inputs.phone.label}
-        </label>
-        <input
-          id="phone"
-          type="number"
-          value={inputs.phone.value}
-          onChange={(ev) => handleInputChange('phone', ev.target.value)}
-          className="font-size-normal"
-          max={SIGNUP_FORM_CONF.inputs.phone.validate.maxLength}
-        />
-        <span>{inputs.phone.msg}</span>
-      </div>
-      <div className="containerY pb-2">
-        <label htmlFor="password" className="font-size-x-normal">
-          {SIGNUP_FORM_CONF.inputs.password.label}
-        </label>
-        <input
-          id="password"
-          type="password"
-          value={inputs.password.value}
-          onChange={(ev) => handleInputChange('password', ev.target.value)}
-          className="font-size-normal"
-        />
-        <span>{inputs.password.msg}</span>
-      </div>
-      <div className="containerY pb-2">
-        <label htmlFor="repassword" className="font-size-x-normal">
-          {SIGNUP_FORM_CONF.inputs.repassword.label}
-        </label>
-        <input
-          id="repassword"
-          type="password"
-          value={inputs.repassword.value}
-          onChange={(ev) => handleInputChange('repassword', ev.target.value)}
-          className="font-size-normal"
-        />
-        <span>{inputs.repassword.value !== inputs.password.value ? 'Las contraseñas deben coincidir.' : ''}</span>
-      </div>
+              </select>
+              <span>{inputs.province.msg}</span>
+            </div>
+            <div className="containerY pb-2">
+              <label htmlFor="mail" className="font-size-x-normal">
+                {SIGNUP_FORM_CONF.inputs.mail.label}
+              </label>
+              <input
+                id="mail"
+                type="mail"
+                value={inputs.mail.value}
+                onChange={(ev) => handleInputChange('mail', ev.target.value)}
+                className="font-size-normal"
+              />
+              <span>{inputs.mail.msg}</span>
+            </div>
+            <div className="containerY pb-2">
+              <label htmlFor="phone" className="font-size-x-normal">
+                {SIGNUP_FORM_CONF.inputs.phone.label}
+              </label>
+              <input
+                id="phone"
+                type="number"
+                value={inputs.phone.value}
+                onChange={(ev) => handleInputChange('phone', ev.target.value)}
+                className="font-size-normal"
+                max={SIGNUP_FORM_CONF.inputs.phone.validate.maxLength}
+              />
+              <span>{inputs.phone.msg}</span>
+            </div>
+            <div className="containerY pb-2">
+              <label htmlFor="password" className="font-size-x-normal">
+                {SIGNUP_FORM_CONF.inputs.password.label}
+              </label>
+              <input
+                id="password"
+                type="password"
+                value={inputs.password.value}
+                onChange={(ev) => handleInputChange('password', ev.target.value)}
+                className="font-size-normal"
+              />
+              <span>{inputs.password.msg}</span>
+            </div>
+            <div className="containerY pb-2">
+              <label htmlFor="repassword" className="font-size-x-normal">
+                {SIGNUP_FORM_CONF.inputs.repassword.label}
+              </label>
+              <input
+                id="repassword"
+                type="password"
+                value={inputs.repassword.value}
+                onChange={(ev) => handleInputChange('repassword', ev.target.value)}
+                className="font-size-normal"
+              />
+              <span>{inputs.repassword.value !== inputs.password.value ? 'Las contraseñas deben coincidir.' : ''}</span>
+            </div>
 
-      <div className="containerY pb-2">
-        <div className="containerX y-center pb-1">
-          <input
-            id="termns"
-            type="checkbox"
-            value={inputs.termns.value}
-            onChange={(ev) => handleInputChange('termns', ev.target.checked)}
-            className="font-size-normal"
-          />
-          <label htmlFor="termns" className="font-size-x-normal">
-            {SIGNUP_FORM_CONF.inputs.termns.label}
-          </label>
+            <div className="containerY pb-2">
+              <div className="containerX y-center pb-1">
+                <input
+                  id="termns"
+                  type="checkbox"
+                  value={inputs.termns.value}
+                  onChange={(ev) => handleInputChange('termns', ev.target.checked)}
+                  className="font-size-normal"
+                />
+                <label htmlFor="termns" className="font-size-x-normal">
+                  {SIGNUP_FORM_CONF.inputs.termns.label}
+                </label>
+              </div>
+              <span>{inputs.termns.msg}</span>
+            </div>
+            <div className="containerY x-center">
+              <button
+                className={`btn btn-${isValid ? 'primary' : 'disabled'}-a font-size-large`}
+                onClick={handleSignup}
+                disabled={!isValid}
+              >
+                {SIGNUP_FORM_CONF.buttons.singup.label}
+              </button>
+            </div>
+          </div>
         </div>
-        <span>{inputs.termns.msg}</span>
-      </div>
-      <div className="containerY x-center">
-        <button
-          className={`btn btn-${isValid ? 'primary' : 'disabled'}-a font-size-large`}
-          onClick={handleSignup}
-          disabled={!isValid}
-        >
-          {SIGNUP_FORM_CONF.buttons.singup.label}
-        </button>
-      </div>
-    </div>
+      )}
+    />
   )
 }
 

@@ -30,6 +30,16 @@ const Option = ({ style, label, technologies }) => {
           </div>
         )
       }
+      case STYLE_TYPES.BUTTON_PRIMARY_B_OUTLINE: {
+        return (
+          <div className="option">
+            <button className={`btn ${STYLE_TYPES.BUTTON_PRIMARY_B_OUTLINE}`}>
+              {label}
+            </button>
+          </div>
+        )
+      }
+
       case STYLE_TYPES.TECHS_SELECTED: {
         return (
           <div className="option">

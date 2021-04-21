@@ -340,6 +340,22 @@ body {
   margin-bottom: 2.5em;
 }
 
+.mt-1 {
+  margin-top: .5em;
+}
+.mt-2 {
+  margin-top: 1em;
+}
+.mt-3 {
+  margin-top: 1.5em;
+}
+.mt-4 {
+  margin-top: 2em;
+}
+.mt-5 {
+  margin-top: 2.5em;
+}
+
 /* Layout */
 
 .containerX {
@@ -378,4 +394,16 @@ body {
 
 .h-auto {
   height: auto;
+}
+
+.app .customHeader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+}
+
+.app .page {
+  min-height: 80vh;
 }
