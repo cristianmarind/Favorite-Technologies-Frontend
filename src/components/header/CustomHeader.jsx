@@ -60,7 +60,7 @@ const Option = ({ style, label }) => {
   return null
 }
 Option.propTypes = {
-  style: PropTypes.oneOf(STYLE_TYPES),
+  style: PropTypes.object,
   label: PropTypes.string
 }
 
